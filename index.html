@@ -3,9 +3,78 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DoilyGenerator</title>
+    <title>DoilyGenerator</title>
   </head>
+  <style>
+	p {
+	  padding-left : 30px;
+	  padding-right : 30px;
+	}
+	h2 {
+	  padding-left: 30px;
+	}
+	table {
+	  font-family: arial, sans-serif;
+	  padding-left: 30px;
+	  padding-right: 30px;
+	  padding-bottom: 20px;
+	}
+
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+  </style>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+	<h1>Doily Generator</h1>
+	<p align="left">Welcome to the Doily Generator! A tool that creates simple doily patterns. The patterns are all in crochet diagram format with an included legend.
+	Feel free to use the generated pattern as is, or modify it as you see fit.<br><br>
+	The doily patterns are not saved anywhere and cannot be retrieved, so I recommend taking a screenshot of the ones you like.</p>
+	<p align="left"><b>Note:</b> Each row will always start with a chain 3 and end with a slip stitch into the third chain. The chain 3 is highlighted in red to make it easy to see in the diagram.</p>
+	
+	<p align="left"><b>Disclaimer:</b> Although all the patterns should work without any modifications needed, it is possible that you will occasionally encounter some that 
+	contain mistakes such as a missing stitch or stitch that works into nothing. I recommend looking over the whole pattern before starting and if you 
+	see anything out of place, either make a note to alter the pattern (e.g. by adding a missing stitch or replacing a dc that works into nothing with a chain) or 
+	generate a new one.</p>
+  
+	<h2>Options</h2>
+	<table align="center">
+	  <tr>
+		<th>Setting</th>
+		<th>Description</th>
+	  </tr>
+	  <tr>
+		<td>Row Count</td>
+		<td>Slide to set the number of rows that the doily will contain (between 5 and 15 rows).</td>
+	  </tr>
+	  <tr>
+		<td>Section Count</td>
+		<td>Select the number of repeating sections for the doily. For example, a section count of 4 means that the same pattern will repeat 4 times for each row.</td>
+	  </tr>
+	  <tr>
+		<td>Show Chart</td>
+		<td>When checked, shows the crochet diagram that can be used to create the pattern. When unchecked, shows an approximation of what the finished product will look like.<b>
+		<b>Warning:</b> approximation may not fully match the finished result.</td>
+	  </tr>
+	  <tr>
+		<td>Show Left Handed</td>
+		<td>When checked, shows the pattern to be worked for left handed users (pattern goes clockwise). When unchecked, shows the pattern for right handed users (pattern goes counter clockwise).</td>
+	  </tr>
+	  <tr>
+		<td>Generate</td>
+		<td>Click to generate a new doily using the above settings.</td>
+	  </tr>
+	  <tr>
+		<td>Random</td>
+		<td>Click to generate a new doily with the above settings randomized.</td>
+	  </tr>
+	</table> 
+  
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
     <script src="Build/Build.loader.js"></script>
     <script>
